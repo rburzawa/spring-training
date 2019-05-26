@@ -1,0 +1,10 @@
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<div th:fragment="header-fragment">
+    <div class="topnav">
+        <a th:if="!${@userContext.isLoggedIn()}" href="/register">Rejestracja</a>
+        <a th:if="!${@userContext.isLoggedIn()}" href="/login">Logowanie</a>
+        <a th:if="${@userContext.isLoggedIn()}" href="/logout">Wyloguj</a>
+        <p th:if="${@userContext.isLoggedIn()}" th:text="${@userContext.provideUsername()}">User</p>
+
+    </div>
+</div>
