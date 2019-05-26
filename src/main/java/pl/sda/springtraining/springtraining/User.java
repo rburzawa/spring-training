@@ -1,7 +1,14 @@
 package pl.sda.springtraining.springtraining;
 
+import lombok.Builder;
+import lombok.Getter;
+import lombok.Setter;
+
 import javax.persistence.*;
 
+@Getter
+@Setter
+@Builder
 @Entity
 public class User {
 
@@ -19,7 +26,6 @@ public class User {
     private String username;
     private String passwordHash;
     private String phone;
-    @Enumerated(EnumType.STRING)
-    private Countries countries;
+
     private boolean preferEmails;
 }
