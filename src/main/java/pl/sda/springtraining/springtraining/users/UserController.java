@@ -1,5 +1,6 @@
-package pl.sda.springtraining.springtraining;
+package pl.sda.springtraining.springtraining.users;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -12,6 +13,8 @@ import javax.validation.Valid;
 @Controller
 public class UserController {
 
+    @Autowired
+    private UserRegistrationService userRegistrationService;
 
     @GetMapping(value = "/register")
     public String showForm (Model model){
@@ -26,6 +29,7 @@ public class UserController {
         if (result.hasErrors()){
             return "/registerForm";
         }
+        userRegistrationService.registerUser(userDTO);
         return "/index";
     }
 

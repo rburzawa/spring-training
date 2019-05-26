@@ -1,4 +1,4 @@
-package pl.sda.springtraining.springtraining;
+package pl.sda.springtraining.springtraining.users;
 
 public enum Countries {
 

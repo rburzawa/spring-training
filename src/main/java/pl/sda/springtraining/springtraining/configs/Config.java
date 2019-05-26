@@ -1,4 +1,4 @@
-package pl.sda.springtraining.springtraining;
+package pl.sda.springtraining.springtraining.configs;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

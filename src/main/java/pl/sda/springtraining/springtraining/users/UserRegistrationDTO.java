@@ -1,8 +1,9 @@
-package pl.sda.springtraining.springtraining;
+package pl.sda.springtraining.springtraining.users;
 
 import lombok.Getter;
 import lombok.Setter;
 
+import javax.validation.constraints.Email;
 import javax.validation.constraints.Size;
 
 @Getter
@@ -13,7 +14,9 @@ public class UserRegistrationDTO {
     private String firstName;
     private String lastName;
     private String birthDate;
+    //@Pattern(regexp = "\\\\d{11}")
     private String pesel;
+    @Email
     private String username;
     private String password;
     private String phone;

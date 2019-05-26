@@ -1,12 +1,12 @@
-package pl.sda.springtraining.springtraining;
+package pl.sda.springtraining.springtraining.users;
 
-import lombok.Builder;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 @Getter
 @Setter
 @Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class UserAddress {
     private String zipCode;
     private String city;
