@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Users</title>
+</head>
+<body>
+Lista użytkowników
+<hr>
+<ul>
+    <li th:each="item : ${users}" th:text="${item.id}+' '+${item.username}"></li>
+</ul>
+</body>
+</html>
+
+<!--
+TODO: dodac header do wszystkich stron,ktore mamy-->

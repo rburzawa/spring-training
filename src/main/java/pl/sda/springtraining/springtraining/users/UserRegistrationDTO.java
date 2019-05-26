@@ -12,7 +12,7 @@ public class UserRegistrationDTO {
 
     @Size(min = 3, max = 15, message = "Imie od 3 do 15 znakow")
     private String firstName;
-    private String lastName;
+    private String lastName; //TODO uzupełnić walidację
     private String birthDate;
     //@Pattern(regexp = "\\\\d{11}")
     private String pesel;
